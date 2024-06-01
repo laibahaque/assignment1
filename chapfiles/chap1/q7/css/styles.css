@@ -1,0 +1,531 @@
+/* Define variables */
+:root {
+    --primary-color: #6bb12e;
+    --header-background: black;
+    --secondary-color: #FED012;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    background-color: var(--header-background);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin: 0 25px;
+    padding: 5px 0;
+}
+
+.social-icons,
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.socialicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(63, 62, 62);
+    margin-right: 4px;
+}
+
+.social-icons i {
+    font-size: 15px;
+    color: rgb(146, 146, 146);
+}
+
+.contact-info i {
+    justify-content: right;
+    color: var(--primary-color);
+}
+
+.contact-info button {
+    padding: 8px 10px;
+    background-color: var(--primary-color);
+    color: var(--header-background);
+    font-size: 11px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    margin-left: auto;
+}
+
+/* Navigation styles */
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-right: 6px;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-right: 18px;
+}
+
+nav ul li:hover {
+    font-weight: bolder;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--header-background);
+    position: relative;
+}
+
+nav ul li:not(:first-child) a::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li:not(:first-child):hover a::after {
+    background-color: var(--secondary-color);
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+nav ul li a img {
+    width: 132px;
+    height: 55px;
+    margin-left: 10px;
+}
+
+nav ul li:first-child a::after {
+    content: none;
+    /* Remove underline from the logo */
+}
+
+/* Main content styles */
+.remaining-height {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    /* Adjust for header height */
+}
+
+.remaining-height .content {
+    text-align: center;
+    margin: 0 20%;
+}
+
+.remaining-height h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.remaining-height p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--header-background);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: -1px 17px 15px -5px rgba(255, 189, 21, 0.75);
+    -webkit-box-shadow: -1px 17px 15px -5px rgba(255, 189, 21, 0.75);
+    -moz-box-shadow: -1px 17px 15px -5px rgba(255, 189, 21, 0.75);
+}
+
+/* Our Advantage section */
+.our-advantage {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.advantage-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantage-content h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.advantage-content p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.advantage-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.advantage-item {
+    margin-right: 20px;
+    display: inline-block;
+    /* Added to make advantage items inline block */
+}
+
+.advantage-item:last-child {
+    margin-right: 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(226, 226, 226);
+    margin: 0 auto;
+    /* Center horizontally */
+}
+
+.logo-container i {
+    font-size: 35px;
+    color: var(--primary-color);
+    margin: auto;
+    /* Center vertically and horizontally */
+}
+
+.adcontent {
+    margin-top: 25px;
+}
+
+.adcontent h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.adcontent p {
+    font-size: 14px;
+}
+
+.about-us {
+    background-color: #E6E7E9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-columns {
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    margin-top: 10px;
+    padding-right: 20px;
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.our-services {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-content h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.services-content p {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.service-card {
+    background-color: #E6E7E9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+    display: inline-block; /* Change display to inline-block */
+    vertical-align: top; /* Align the cards to the top */
+    width: calc(24% - 20px); /* Set the width of each card to 25% of the container minus the margin */
+    margin-right: 20px; /* Add margin between the cards */
+}
+
+.service-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin: -45px auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon i {
+    color: #e70d0d;
+    font-size: 24px;
+}
+
+.service-details {
+    text-align: center;
+}
+
+.service-details h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.service-details p {
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.service-details a {
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.service-details a:hover {
+    color: #4e9600;
+}
+
+.our-portfolio {
+    background-color: #1a1a1a;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+.portfolio-heading {
+    margin-bottom: 30px;
+}
+
+.portfolio-heading h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.portfolio-links {
+    margin-bottom: 30px;
+}
+
+.portfolio-links h5 {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.portfolio-links h5 a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.portfolio-links h5 a:hover {
+    color: #f90;
+}
+
+.portfolio-table {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.portfolio-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.portfolio-table td {
+    width: 20%; /* Each cell occupies 20% of the width */
+    padding: 0;
+}
+
+.portfolio-table img {
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 10px;
+        /* Adjust margin for smaller screens */
+    }
+
+    .social-icons,
+    .contact-info {
+        margin-bottom: 10px;
+    }
+
+    .contact-info button {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        justify-content: center;
+        /* Center align items */
+    }
+
+    nav ul li a {
+        padding: 10px;
+        /* Increase padding for better touch target */
+    }
+
+    .remaining-height .content {
+        margin: 0 10%;
+        /* Adjust content margin */
+    }
+
+    .remaining-height h1 {
+        font-size: 24px;
+        /* Decrease font size for smaller screens */
+    }
+
+    .remaining-height p {
+        font-size: 12px;
+        /* Decrease font size for smaller screens */
+    }
+
+    .remaining-height button {
+        font-size: 10px;
+        /* Decrease font size for smaller screens */
+        padding: 8px 16px;
+        /* Adjust button padding */
+    }
+
+    .logo-container {
+        width: 80px;
+        /* Decrease logo size for smaller screens */
+        height: 80px;
+        /* Decrease logo size for smaller screens */
+    }
+
+    .logo-container i {
+        font-size: 30px;
+        /* Decrease icon size for smaller screens */
+    }
+
+    .advantage-items {
+        flex-wrap: wrap;
+        /* Set flex-wrap to wrap for smaller screens */
+    }
+
+    .advantage-item {
+        width: 50%;
+        /* Set width to 50% for smaller screens */
+        margin-right: 0;
+        /* Remove margin-right for smaller screens */
+    }
+
+    .about-columns {
+        flex-direction: column; /* Change flex direction to column for smaller screens */
+    }
+
+    .about-text,
+    .about-image {
+        flex: none; /* Disable flex grow for columns */
+        width: 100%; /* Set each column to occupy 100% of the width */
+        margin-bottom: 20px; /* Add margin below each column */
+    }
+
+    .service-card {
+        width: 100%; /* Set each card to occupy 100% of the width */
+        margin-right: 0; /* Remove margin between cards */
+        margin-bottom: 20px; /* Add margin below each card */
+    }
+}
